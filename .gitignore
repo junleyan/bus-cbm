@@ -1,0 +1,6 @@
+modules/__pycache__/*
+weights/stage_3c_weights.pth
+reader-ui/node_modules/*
+reader-ui/.next/*
+testing.py
+testing2.py
