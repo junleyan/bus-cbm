@@ -2,6 +2,7 @@ SOLVER:
   MOMENTUM: 0.4
   BASE_LR: 0.004
 MODEL:
+  DEVICE: "cpu"
   WEIGHTS: 'weights/stage_3c_weights.pth'
   BACKBONE:
     FREEZE_AT: 4
