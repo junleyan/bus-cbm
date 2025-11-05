@@ -24,3 +24,42 @@ python setup.py install
 - To validate code functionality, run sample code in notebook corresponding to desired functionality (e.g. for an example of how to load and test pretrained models)
     - `model_eval.ipynb` for sample COCO-style evaluation scripts
     - `model_train.py` for sample model training script
+
+## Reader UI Setup
+### 1. Install NVM (Node Version Manager)
+```
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+### 2. Load NVM into the current shell
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+```
+### 3. Install and use the latest LTS Node.js version
+```
+nvm install --lts
+nvm use --lts
+```
+### (Optional) Verify installation
+```
+node -v
+npm -v
+```
+### 4. Navigate to the web application project directory
+```
+cd reader-ui
+```
+### 5. Install dependencies and build the web application
+```
+npm install
+npm run build
+```
+### 6. Return to the project root and start the application
+```
+sh start.sh
+```
+### 7. Access the application
+Once both the FastAPI backend and Next.js frontend are running, open:
+```
+http://localhost:3000
+```
