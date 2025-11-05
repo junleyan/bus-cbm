@@ -63,3 +63,6 @@ Once both the FastAPI backend and Next.js frontend are running, open:
 ```
 http://localhost:3000
 ```
+### Notes
+- Place the image to be annotated in the `sample_data/` directory.
+- Saved annotations are stored in `annotated.json`.
