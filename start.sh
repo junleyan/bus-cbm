@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/sh
+set -e
 
 # Start FastAPI backend
 echo "Starting FastAPI (main.py)..."
@@ -16,8 +16,9 @@ echo "Backend PID: $BACKEND_PID"
 echo "Frontend PID: $FRONTEND_PID"
 echo "Both services running..."
 
-# Trap Ctrl+C and kill both
-trap "echo 'Stopping services...'; kill $BACKEND_PID $FRONTEND_PID 2>/dev/null; exit" INT TERM
+# Stop both on Ctrl+C
+trap 'echo "Stopping services..."; kill $BACKEND_PID $FRONTEND_PID 2>/dev/null; exit' INT TERM
 
 # Wait for both to finish
-wait $BACKEND_PID $FRONTEND_PID
+wait $BACKEND_PID
+wait $FRONTEND_PID
