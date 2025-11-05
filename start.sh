@@ -1,6 +1,12 @@
 #!/bin/sh
 set -e
 
+# Activate Conda environment (conda must already be initialized in your shell)
+# Change env name if needed
+ENV_NAME="detectron2_cpu"
+echo "Activating conda environment: $ENV_NAME"
+conda activate "$ENV_NAME"
+
 # Start FastAPI backend
 echo "Starting FastAPI (main.py)..."
 python3 main.py &
