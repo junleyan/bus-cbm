@@ -66,3 +66,11 @@ http://localhost:3000
 ### Notes
 - Place the image to be annotated in the `sample_data/` directory.
 - Saved annotations are stored in `annotated.json`.
+
+### Application Views
+| Route         | AI Output | Sliders | Description                                         |
+|---------------|----------|--------|-----------------------------------------------------|
+| `/`           | No       | No     | Standard view, no AI or adjustments      |
+| `/manual`     | No       | No     | Standard view, no AI or adjustments                              |
+| `/visible`    | Yes      | No     | AI output, no adjustments             |
+| `/interactive`| Yes      | Yes    | AI output with adjustments sliders        |
