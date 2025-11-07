@@ -1,5 +1,10 @@
 #!/bin/sh
+
+cd "$(dirname "$0")"
+
 set -e
+
+eval "$(conda shell.bash hook)"
 
 # Activate Conda environment (conda must already be initialized in your shell)
 # Change env name if needed
