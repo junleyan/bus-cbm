@@ -49,16 +49,20 @@ npm -v
 ```
 cd reader-ui
 ```
-### 5. Install dependencies and build the web application
+### 5. Create .env
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000 # URL of your Python FastAPI REST API
+```
+### 6. Install dependencies and build the web application
 ```
 npm install
 npm run build
 ```
-### 6. Return to the project root and start the application
+### 7. Return to the project root and start the application
 ```
 sh start.sh
 ```
-### 7. Access the application
+### 8. Access the application
 Once both the FastAPI backend and Next.js frontend are running, open:
 ```
 http://localhost:3000
